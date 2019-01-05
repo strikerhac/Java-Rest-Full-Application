@@ -1,0 +1,226 @@
+INFO   [18:17:10.650] [main] o.e.j.u.log -  Logging initialized @4848ms to org.eclipse.jetty.util.log.Slf4jLog 
+INFO   [18:17:11.266] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [18:17:11.266] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [18:17:11.266] [main] i.d.a.AssetsBundle -  Registering AssetBundle with name: assets for path /assets/* 
+INFO   [18:17:11.389] [main] i.d.a.AssetsBundle -  Registering AssetBundle with name: swagger-assets for path /swagger-static/* 
+INFO   [18:17:11.743] [main] o.r.Reflections -  Reflections took 188 ms to scan 1 urls, producing 15 keys and 15 values  
+INFO   [18:17:14.093] [main] o.h.Version -  HHH000412: Hibernate Core {5.2.8.Final} 
+INFO   [18:17:14.097] [main] o.h.c.Environment -  HHH000206: hibernate.properties not found 
+WARN   [18:17:14.231] [main] o.h.o.deprecation -  HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time. 
+INFO   [18:17:15.383] [main] o.h.a.c.Version -  HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+WARN   [18:17:15.892] [main] o.h.o.c.pooling -  HHH10001002: Using Hibernate built-in connection pool (not for production use!) 
+INFO   [18:17:16.016] [main] o.h.o.c.pooling -  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/lab7] 
+INFO   [18:17:16.016] [main] o.h.o.c.pooling -  HHH10001001: Connection properties: {user=root, password=****} 
+INFO   [18:17:16.016] [main] o.h.o.c.pooling -  HHH10001003: Autocommit mode: false 
+INFO   [18:17:16.024] [main] o.h.e.j.c.i.DriverManagerConnectionProviderImpl -  HHH000115: Hibernate connection pool size: 20 (min=1) 
+INFO   [18:17:17.499] [main] o.h.d.Dialect -  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+INFO   [18:17:18.102] [main] o.h.e.j.e.i.LobCreatorBuilderImpl -  HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4 
+INFO   [18:17:23.032] [main] o.h.o.c.access -  HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@550c973e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode. 
+INFO   [18:17:23.167] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [18:17:23.167] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [18:17:23.183] [main] i.d.s.ServerFactory -  Starting AggregatorApplication 
+INFO   [18:17:23.676] [main] o.e.j.s.SetUIDListener -  Opened application@43e8f1c{HTTP/1.1,[http/1.1]}{0.0.0.0:18080} 
+INFO   [18:17:23.676] [main] o.e.j.s.SetUIDListener -  Opened admin@66a82a13{HTTP/1.1,[http/1.1]}{0.0.0.0:18082} 
+INFO   [18:17:23.680] [main] o.e.j.s.Server -  jetty-9.4.2.v20170220 
+INFO   [18:17:26.608] [main] i.d.j.DropwizardResourceConfig -  The following paths were found for the configured resources:
+
+    POST    /person (edu.seecs.dropwizard.DeviceResources)
+    DELETE  /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    GET     /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    PUT     /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+ 
+INFO   [18:17:26.613] [main] o.e.j.s.h.ContextHandler -  Started i.d.j.MutableServletContextHandler@655203e3{/,null,AVAILABLE} 
+INFO   [18:17:26.646] [main] i.d.s.AdminEnvironment -  tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+ 
+WARN   [18:17:26.646] [main] i.d.s.AdminEnvironment -  
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+INFO   [18:17:26.674] [main] o.e.j.s.h.ContextHandler -  Started i.d.j.MutableServletContextHandler@5604b85{/,null,AVAILABLE} 
+INFO   [18:17:26.738] [main] o.e.j.s.AbstractConnector -  Started application@43e8f1c{HTTP/1.1,[http/1.1]}{0.0.0.0:18080} 
+INFO   [18:17:26.742] [main] o.e.j.s.AbstractConnector -  Started admin@66a82a13{HTTP/1.1,[http/1.1]}{0.0.0.0:18082} 
+INFO   [18:17:26.742] [main] o.e.j.s.Server -  Started @20943ms 
+INFO   [18:17:28.478] [dw-24 - GET /swagger.json] o.r.Reflections -  Reflections took 137 ms to scan 1 urls, producing 15 keys and 15 values  
+INFO   [22:03:45.546] [main] o.e.j.u.log -  Logging initialized @3546ms to org.eclipse.jetty.util.log.Slf4jLog 
+INFO   [22:03:45.766] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [22:03:45.782] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [22:03:45.782] [main] i.d.a.AssetsBundle -  Registering AssetBundle with name: assets for path /assets/* 
+INFO   [22:03:45.844] [main] i.d.a.AssetsBundle -  Registering AssetBundle with name: swagger-assets for path /swagger-static/* 
+INFO   [22:03:45.962] [main] o.r.Reflections -  Reflections took 78 ms to scan 1 urls, producing 17 keys and 17 values  
+INFO   [22:03:46.964] [main] o.h.Version -  HHH000412: Hibernate Core {5.2.8.Final} 
+INFO   [22:03:46.971] [main] o.h.c.Environment -  HHH000206: hibernate.properties not found 
+WARN   [22:03:47.096] [main] o.h.o.deprecation -  HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time. 
+INFO   [22:03:47.644] [main] o.h.a.c.Version -  HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+WARN   [22:03:48.011] [main] o.h.o.c.pooling -  HHH10001002: Using Hibernate built-in connection pool (not for production use!) 
+INFO   [22:03:48.029] [main] o.h.o.c.pooling -  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/lab7] 
+INFO   [22:03:48.029] [main] o.h.o.c.pooling -  HHH10001001: Connection properties: {user=root, password=****} 
+INFO   [22:03:48.029] [main] o.h.o.c.pooling -  HHH10001003: Autocommit mode: false 
+INFO   [22:03:48.029] [main] o.h.e.j.c.i.DriverManagerConnectionProviderImpl -  HHH000115: Hibernate connection pool size: 20 (min=1) 
+INFO   [22:03:48.435] [main] o.h.d.Dialect -  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+INFO   [22:03:48.545] [main] o.h.e.j.e.i.LobCreatorBuilderImpl -  HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4 
+INFO   [22:03:50.026] [main] o.h.o.c.access -  HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@60b616c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode. 
+INFO   [22:03:50.085] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [22:03:50.085] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [22:03:50.101] [main] i.d.s.ServerFactory -  Starting AggregatorApplication 
+INFO   [22:03:50.335] [main] o.e.j.s.SetUIDListener -  Opened application@59f45950{HTTP/1.1,[http/1.1]}{0.0.0.0:18080} 
+INFO   [22:03:50.335] [main] o.e.j.s.SetUIDListener -  Opened admin@7871d261{HTTP/1.1,[http/1.1]}{0.0.0.0:18082} 
+INFO   [22:03:50.335] [main] o.e.j.s.Server -  jetty-9.4.2.v20170220 
+INFO   [22:03:51.340] [main] i.d.j.DropwizardResourceConfig -  The following paths were found for the configured resources:
+
+    POST    /person (edu.seecs.dropwizard.DeviceResources)
+    DELETE  /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    GET     /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    PUT     /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+ 
+INFO   [22:03:51.351] [main] o.e.j.s.h.ContextHandler -  Started i.d.j.MutableServletContextHandler@2774dcf4{/,null,AVAILABLE} 
+INFO   [22:03:51.351] [main] i.d.s.AdminEnvironment -  tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+ 
+WARN   [22:03:51.351] [main] i.d.s.AdminEnvironment -  
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+INFO   [22:03:51.367] [main] o.e.j.s.h.ContextHandler -  Started i.d.j.MutableServletContextHandler@1e5b33e5{/,null,AVAILABLE} 
+INFO   [22:03:51.406] [main] o.e.j.s.AbstractConnector -  Started application@59f45950{HTTP/1.1,[http/1.1]}{0.0.0.0:18080} 
+INFO   [22:03:51.422] [main] o.e.j.s.AbstractConnector -  Started admin@7871d261{HTTP/1.1,[http/1.1]}{0.0.0.0:18082} 
+INFO   [22:03:51.422] [main] o.e.j.s.Server -  Started @9415ms 
+INFO   [22:04:00.917] [dw-21 - GET /swagger.json] o.r.Reflections -  Reflections took 16 ms to scan 1 urls, producing 17 keys and 17 values  
+ERROR  [22:04:20.331] [dw-23 - DELETE /person/%7BpersonID%7D] i.d.j.e.LoggingExceptionMapper -  Error handling a request: 5f5099fbf96a5c5c 
+java.lang.IllegalArgumentException: attempt to create delete event with null entity
+	at org.hibernate.event.spi.DeleteEvent.<init>(DeleteEvent.java:31)
+	at org.hibernate.internal.SessionImpl.delete(SessionImpl.java:920)
+	at edu.seecs.dropwizard.DBHandler.delete(DBHandler.java:34)
+	at edu.seecs.dropwizard.DeviceResources.del(DeviceResources.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+	at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+	at io.dropwizard.jetty.NonblockingServletHolder.handle(NonblockingServletHolder.java:49)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
+	at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:50)
+	at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:44)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:308)
+	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:262)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1621)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:541)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:188)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1239)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:168)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:481)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:166)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1141)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at com.codahale.metrics.jetty9.InstrumentedHandler.handle(InstrumentedHandler.java:241)
+	at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:52)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:494)
+	at io.dropwizard.jetty.BiDiGzipHandler.handle(BiDiGzipHandler.java:68)
+	at org.eclipse.jetty.server.handler.RequestLogHandler.handle(RequestLogHandler.java:56)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:169)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:564)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:110)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:672)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:590)
+	at java.lang.Thread.run(Unknown Source)
+INFO   [22:06:49.937] [main] o.e.j.u.log -  Logging initialized @2954ms to org.eclipse.jetty.util.log.Slf4jLog 
+INFO   [22:06:50.173] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [22:06:50.189] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [22:06:50.189] [main] i.d.a.AssetsBundle -  Registering AssetBundle with name: assets for path /assets/* 
+INFO   [22:06:50.251] [main] i.d.a.AssetsBundle -  Registering AssetBundle with name: swagger-assets for path /swagger-static/* 
+INFO   [22:06:50.360] [main] o.r.Reflections -  Reflections took 78 ms to scan 1 urls, producing 17 keys and 17 values  
+INFO   [22:06:50.860] [main] o.h.Version -  HHH000412: Hibernate Core {5.2.8.Final} 
+INFO   [22:06:50.860] [main] o.h.c.Environment -  HHH000206: hibernate.properties not found 
+WARN   [22:06:50.907] [main] o.h.o.deprecation -  HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time. 
+INFO   [22:06:51.282] [main] o.h.a.c.Version -  HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+WARN   [22:06:51.504] [main] o.h.o.c.pooling -  HHH10001002: Using Hibernate built-in connection pool (not for production use!) 
+INFO   [22:06:51.504] [main] o.h.o.c.pooling -  HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/lab7] 
+INFO   [22:06:51.504] [main] o.h.o.c.pooling -  HHH10001001: Connection properties: {user=root, password=****} 
+INFO   [22:06:51.504] [main] o.h.o.c.pooling -  HHH10001003: Autocommit mode: false 
+INFO   [22:06:51.520] [main] o.h.e.j.c.i.DriverManagerConnectionProviderImpl -  HHH000115: Hibernate connection pool size: 20 (min=1) 
+INFO   [22:06:51.926] [main] o.h.d.Dialect -  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect 
+INFO   [22:06:52.004] [main] o.h.e.j.e.i.LobCreatorBuilderImpl -  HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4 
+INFO   [22:06:53.126] [main] o.h.o.c.access -  HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@60b616c8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode. 
+INFO   [22:06:53.166] [main] i.d.s.DefaultServerFactory -  Registering jersey handler with root path prefix: / 
+INFO   [22:06:53.166] [main] i.d.s.DefaultServerFactory -  Registering admin handler with root path prefix: / 
+INFO   [22:06:53.166] [main] i.d.s.ServerFactory -  Starting AggregatorApplication 
+INFO   [22:06:53.338] [main] o.e.j.s.SetUIDListener -  Opened application@59f45950{HTTP/1.1,[http/1.1]}{0.0.0.0:18080} 
+INFO   [22:06:53.338] [main] o.e.j.s.SetUIDListener -  Opened admin@7871d261{HTTP/1.1,[http/1.1]}{0.0.0.0:18082} 
+INFO   [22:06:53.338] [main] o.e.j.s.Server -  jetty-9.4.2.v20170220 
+INFO   [22:06:54.372] [main] i.d.j.DropwizardResourceConfig -  The following paths were found for the configured resources:
+
+    POST    /person (edu.seecs.dropwizard.DeviceResources)
+    DELETE  /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    GET     /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    PUT     /person/{personID} (edu.seecs.dropwizard.DeviceResources)
+    GET     /swagger (io.federecio.dropwizard.swagger.SwaggerResource)
+    GET     /swagger.{type:json|yaml} (io.swagger.jaxrs.listing.ApiListingResource)
+ 
+INFO   [22:06:54.384] [main] o.e.j.s.h.ContextHandler -  Started i.d.j.MutableServletContextHandler@2774dcf4{/,null,AVAILABLE} 
+INFO   [22:06:54.384] [main] i.d.s.AdminEnvironment -  tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+ 
+WARN   [22:06:54.384] [main] i.d.s.AdminEnvironment -  
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+INFO   [22:06:54.400] [main] o.e.j.s.h.ContextHandler -  Started i.d.j.MutableServletContextHandler@1e5b33e5{/,null,AVAILABLE} 
+INFO   [22:06:54.416] [main] o.e.j.s.AbstractConnector -  Started application@59f45950{HTTP/1.1,[http/1.1]}{0.0.0.0:18080} 
+INFO   [22:06:54.416] [main] o.e.j.s.AbstractConnector -  Started admin@7871d261{HTTP/1.1,[http/1.1]}{0.0.0.0:18082} 
+INFO   [22:06:54.416] [main] o.e.j.s.Server -  Started @7436ms 
+INFO   [22:12:01.072] [dw-23 - GET /swagger.json] o.r.Reflections -  Reflections took 12 ms to scan 1 urls, producing 17 keys and 17 values  
