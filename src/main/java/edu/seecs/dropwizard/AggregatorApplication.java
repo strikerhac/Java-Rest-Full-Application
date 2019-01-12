@@ -59,7 +59,7 @@ public class AggregatorApplication extends Application<AggregatorConfiguration> 
 		cors.setInitParameter(CrossOriginFilter.ALLOW_CREDENTIALS_PARAM, "true");
 		// Add URL mapping
 		cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
-		DeviceResources idmsDocsResource = new DeviceResources(environment.getValidator());
+		PersonResources idmsDocsResource = new PersonResources(environment.getValidator());
 		environment.jersey().register(idmsDocsResource);
 
 	}

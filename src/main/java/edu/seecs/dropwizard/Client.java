@@ -11,90 +11,91 @@ public class Client {
 
 		ClientApp fixture = new ClientApp();
 		int choice = 0;
+		String username;
+		String password;
 		int id;
 		String name;
 		String fathername;
 		String organization;
 		String mobile;
 		Person person;
+		System.out.println("<--------------------------------------------------------------------------------->");
+		System.out.println("<-----------------------------------HTTP CLIENT----------------------------------->");
+		while (true) {
+			System.out.println("<--------------------------------------------------------------------------------->");
+			System.out.println("");
+			System.out.print("Menu {GET = 1;  POST = 2;  DELETE = 3}:  ");
+			Scanner input = new Scanner(System.in);
+			choice = input.nextInt();
+			switch (choice) {
+			case 1:
+				System.out.print("User Name: ");
+				input.nextLine();
+				username = input.nextLine();
+				System.out.print("Password: ");
+				password = input.nextLine();
+				System.out.print("Student ID: ");
+				id = input.nextInt();
+				try {
+					fixture.doGet(username, password, id);
+				} catch (ClientProtocolException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				break;
 
-		System.out.println("Menu {POST = 1;  DELETE = 2; PUT = 3; GET = 4}");
-		Scanner input = new Scanner(System.in);
-		choice = input.nextInt();
-		switch (choice) {
-		case 1:
-			System.out.println("Stuendent ID?");
-			id = input.nextInt();
-			System.out.println("Stuendent name?");
-			name = input.nextLine();
-			name = input.nextLine();
-			System.out.println("Stuendent fathername?");
-			fathername = input.nextLine();
-			System.out.println("Stuendent organization?");
-			organization = input.nextLine();
-			System.out.println("Stuendent mobile?");
-			mobile = input.nextLine();
-			person = new Person(id, name, fathername, organization, mobile);
-			try {
-				fixture.doPost(person);
-			} catch (ClientProtocolException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
+			case 2:
+				System.out.println("Student ID?");
+				id = input.nextInt();
+				System.out.println("Student username?");
+				username = input.nextLine();
+				username = input.nextLine();
+				System.out.println("Student password?");
+				password = input.nextLine();
+				System.out.println("Student name?");
+				name = input.nextLine();
+				System.out.println("Student fathername?");
+				fathername = input.nextLine();
+				System.out.println("Student organization?");
+				organization = input.nextLine();
+				System.out.println("Student mobile?");
+				mobile = input.nextLine();
+				person = new Person(id, username, password, name, fathername, organization, mobile);
+				try {
+					fixture.doPost(person);
+				} catch (ClientProtocolException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				
+				break;
+
+			case 3:
+				System.out.print("User Name: ");
+				input.nextLine();
+				username = input.nextLine();
+				System.out.print("Password: ");
+				password = input.nextLine();
+				System.out.print("Student ID: ");
+				id = input.nextInt();
+				try {
+					fixture.doDelete(username, password, id);
+				} catch (ClientProtocolException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				
+				break;
+
+			default:
+				System.out.println("Invalid choice");
+				input.close();
 			}
-			System.out.println("Student record added successfully!");
-			break;
-		case 2:
-			System.out.println("Stuendent ID?");
-			id = input.nextInt();
-			try {
-				fixture.doDelete(id);
-			} catch (ClientProtocolException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			System.out.println("Student record delete successfully!");
-			break;
-		case 3:
-			System.out.println("Stuendent ID?");
-			id = input.nextInt();
-			System.out.println("Stuendent name?");
-			name = input.nextLine();
-			name = input.nextLine();
-			System.out.println("Stuendent fathername?");
-			fathername = input.nextLine();
-			System.out.println("Stuendent organization?");
-			organization = input.nextLine();
-			System.out.println("Stuendent mobile?");
-			mobile = input.nextLine();
-			person = new Person(id, name, fathername, organization, mobile);
-			try {
-				fixture.doPut(person);
-			} catch (ClientProtocolException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			System.out.println("Student record updated successfully!");
-			break;
-		case 4:
-			System.out.println("Stuendent ID?");
-			id = input.nextInt();
-			try {
-				fixture.doGet(id);
-			} catch (ClientProtocolException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			System.out.println("Student record retrieved successfully!");
-			break;
-		default:
-			System.out.println("Invalid choice");
-			input.close();
+
 		}
-
 	}
 
 }

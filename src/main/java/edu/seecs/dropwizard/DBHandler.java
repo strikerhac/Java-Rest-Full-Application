@@ -1,10 +1,13 @@
 package edu.seecs.dropwizard;
 
+import java.util.Base64;
+import java.util.regex.Pattern;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
 public class DBHandler {
@@ -20,6 +23,26 @@ public class DBHandler {
 		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(config.getProperties())
 				.build();
 		this.factory = config.buildSessionFactory(serviceRegistry);
+	}
+
+	public boolean authorize(String encodedString) {
+		byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
+		String decodedString = new String(decodedBytes);
+		String split[] = decodedString.split(Pattern.quote("|"));
+		String username = (split[0]);
+		String password = (split[1]);
+		init();
+		String hql = "FROM Person p WHERE p.username=:uname and p.password=:pword";
+		@SuppressWarnings("rawtypes")
+		Query query = session.createQuery(hql);
+		query.setParameter("uname", username);
+		query.setParameter("pword", password);
+		Person person = (Person) query.uniqueResult();
+		close();
+		if (person != null)
+			return true;
+		else
+			return false;
 	}
 
 	public void save(Person p) {

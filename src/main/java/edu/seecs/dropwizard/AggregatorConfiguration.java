@@ -17,7 +17,7 @@ public class AggregatorConfiguration extends Configuration {
   
 
     @NotEmpty
-    private String defaultName = "iot";
+    private String defaultName = "person";
 
     @JsonProperty("swagger")
     private SwaggerBundleConfiguration swaggerBundleConfiguration;
